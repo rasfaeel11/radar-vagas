@@ -22,8 +22,8 @@ Levantamento feito em **2026-11-19**. Contagem = issues abertas atualizadas nos 
 - `since` filtra por **`updated_at`**, não por criação. Filtrar `created_at` no adaptador.
 - O endpoint de issues também devolve **PRs**: descartar itens com `pull_request`.
 - **Não existe campo de empresa.** Ela vem no título, em formatos variados:
-  - `[Remoto] Desenvolvedor(a) Backend Pleno - White Label e Plataforma - Mimix AI` → último segmento após `-`
-  - `[Remote] Product Engineer na JotPsych` → depois de `na` / `at`
+  - `[Remoto] Desenvolvedor(a) Backend Pleno - White Label e Plataforma - Mimix AI` → último segmento depois de " - " (hífen com espaços)
+  - `[Remote] Product Engineer na JotPsych` → depois de " na " / " at "
   - Corpo costuma ter a seção `### Sobre a empresa` / `### About the company`.
   - Fallback: `desconhecida`.
 - Título costuma começar com a modalidade entre colchetes: `[Remoto]`, `[Remote]`, `[Híbrido]`.
