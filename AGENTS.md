@@ -146,10 +146,10 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 ### Fase 2 — Tipos e núcleo (`src/core/`)
 
 - [x] Tipos: `VagaBruta`, `Vaga`, `Perfil`, `ResultadoPontuacao` (score + motivos + descartada)
-- [ ] **[agente]** Testes de `normalizar` com casos de vaga real
+- [x] **[agente]** Testes de `normalizar` com casos de vaga real
 - [ ] **[autor, sem IA]** Implementar `normalizar`
 - [ ] **[agente]** Revisar `normalizar`
-- [ ] **[agente]** Testes de `pontuar` com casos de vaga real
+- [x] **[agente]** Testes de `pontuar` com casos de vaga real
 - [ ] **[autor, sem IA]** Implementar `pontuar`
 - [ ] **[agente]** Revisar `pontuar`
 - [x] `deduplicar` (empresa + título normalizado, janela de 14 dias) + testes
