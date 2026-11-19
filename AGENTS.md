@@ -39,7 +39,7 @@ Toda manhã chega no Telegram uma lista com as vagas novas das últimas 24h que 
 - Node.js (LTS) + **TypeScript** (strict)
 - **better-sqlite3** para persistência
 - **node-cron** para agendamento
-- Bot do Telegram (lib a decidir: `grammy` ou `telegraf`)
+- Bot do Telegram: **grammY** (TypeScript nativo, suporte a tópicos via `message_thread_id`)
 - **Vitest** para testes
 - `fetch` nativo para HTTP
 
@@ -56,6 +56,10 @@ config/
   perfis.json      perfis "dev" e "suporte"
   empresas.json    empresas do Greenhouse e do Lever (preenchido à mão)
 ```
+
+### Fluxo da regra de estudo nos arquivos
+
+`src/core/normalizar.ts` e `src/core/pontuar.ts` exportam `IMPLEMENTADO = false` e os testes usam `describe.skipIf(!IMPLEMENTADO)`. Assim o CI fica verde enquanto a implementação não existe. O autor muda para `true` quando começar a implementar.
 
 ### Regras de arquitetura
 
@@ -122,34 +126,34 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 
 ### Fase 0 — Validação das fontes (antes de codar)
 
-- [ ] Confirmar que `backend-br/vagas` está ativo (issues recentes) e anotar o formato real dos labels
-- [ ] Confirmar `frontendbr/vagas` e anotar labels
-- [ ] Levantar outros repos da mesma família que estejam ativos
-- [ ] Testar endpoint do Greenhouse com 1 empresa real e anotar o formato
-- [ ] Testar endpoint do Lever com 1 empresa real e anotar o formato
-- [ ] Registrar os achados em `docs/fontes.md`
+- [x] Confirmar que `backend-br/vagas` está ativo (issues recentes) e anotar o formato real dos labels
+- [x] Confirmar `frontendbr/vagas` e anotar labels
+- [x] Levantar outros repos da mesma família que estejam ativos
+- [x] Testar endpoint do Greenhouse com 1 empresa real e anotar o formato
+- [x] Testar endpoint do Lever com 1 empresa real e anotar o formato
+- [x] Registrar os achados em `docs/fontes.md`
 
 ### Fase 1 — Setup do projeto
 
-- [ ] `package.json`, TypeScript strict, `tsconfig.json`
-- [ ] Vitest configurado (`npm test`)
-- [ ] Scripts: `dev`, `build`, `start`, `test`, `typecheck`, `lint`
-- [ ] ESLint + Prettier
+- [x] `package.json`, TypeScript strict, `tsconfig.json`
+- [x] Vitest configurado (`npm test`)
+- [x] Scripts: `dev`, `build`, `start`, `test`, `typecheck`, `lint`
+- [x] ESLint + Prettier
 - [ ] Carregamento e validação do `.env`
 - [ ] Carregamento e validação de `config/perfis.json` e `config/empresas.json`
-- [ ] CI no GitHub Actions (typecheck + testes)
+- [x] CI no GitHub Actions (typecheck + testes)
 
 ### Fase 2 — Tipos e núcleo (`src/core/`)
 
-- [ ] Tipos: `VagaBruta`, `Vaga`, `Perfil`, `ResultadoPontuacao` (score + motivos + descartada)
+- [x] Tipos: `VagaBruta`, `Vaga`, `Perfil`, `ResultadoPontuacao` (score + motivos + descartada)
 - [ ] **[agente]** Testes de `normalizar` com casos de vaga real
 - [ ] **[autor, sem IA]** Implementar `normalizar`
 - [ ] **[agente]** Revisar `normalizar`
 - [ ] **[agente]** Testes de `pontuar` com casos de vaga real
 - [ ] **[autor, sem IA]** Implementar `pontuar`
 - [ ] **[agente]** Revisar `pontuar`
-- [ ] `deduplicar` (empresa + título normalizado, janela de 14 dias) + testes
-- [ ] `escolherPerfil` (maior score, mínimo 40) + testes
+- [x] `deduplicar` (empresa + título normalizado, janela de 14 dias) + testes
+- [x] `escolherPerfil` (maior score, mínimo 40) + testes
 
 ### Fase 3 — Fontes (`src/fontes/`)
 
