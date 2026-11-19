@@ -174,12 +174,12 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 
 ### Fase 5 — Telegram (`src/notificar/`)
 
-- [ ] Bot com token do `.env`
-- [ ] Filtro de segurança (só grupo e usuário do `.env`)
-- [ ] Formatação da vaga (título, empresa, modalidade, score, 2 motivos, link)
-- [ ] Envio por tópico (`message_thread_id`), até 15 vagas por tópico, ordenadas por score
-- [ ] Botões inline Apliquei / Descartar → grava em `acoes` e atualiza a mensagem
-- [ ] Comando `/semana`
+- [x] Bot com token do `.env`
+- [x] Filtro de segurança (só grupo e usuário do `.env`)
+- [x] Formatação da vaga (título, empresa, modalidade, score, 2 motivos, link)
+- [x] Envio por tópico (`message_thread_id`), até 15 vagas por tópico, ordenadas por score
+- [x] Botões inline Apliquei / Descartar → grava em `acoes` e atualiza a mensagem
+- [x] Comando `/semana`
 
 ### Fase 6 — Jobs (`src/jobs/`)
 
