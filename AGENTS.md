@@ -166,11 +166,11 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 
 ### Fase 4 — Persistência (`src/store/`)
 
-- [ ] Schema SQLite: `vagas`, `envios`, `acoes (vaga_id, acao, data)`
-- [ ] Migrações simples
-- [ ] Inserir vagas novas e consultar as das últimas 24h não enviadas
-- [ ] Registrar envios e ações
-- [ ] Consulta agregada para `/semana` (por fonte)
+- [x] Schema SQLite: `vagas`, `envios`, `acoes (vaga_id, acao, data)`
+- [x] Migrações simples
+- [x] Inserir vagas novas e consultar as das últimas 24h não enviadas
+- [x] Registrar envios e ações
+- [x] Consulta agregada para `/semana` (por fonte)
 
 ### Fase 5 — Telegram (`src/notificar/`)
 
