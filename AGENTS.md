@@ -183,9 +183,9 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 
 ### Fase 6 — Jobs (`src/jobs/`)
 
-- [ ] Coleta agendada (node-cron): fontes → normalizar → deduplicar → pontuar → salvar
-- [ ] Resumo diário às 8h (fuso America/Recife)
-- [ ] Logs simples de cada execução
+- [x] Coleta agendada (node-cron): fontes → normalizar → deduplicar → pontuar → salvar
+- [x] Resumo diário às 8h (fuso America/Recife)
+- [x] Logs simples de cada execução
 
 ### Fase 7 — Deploy e operação
 
