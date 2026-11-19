@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "titulosBons": ["desenvolvedor", "developer", "dev", "backend", "fullstack", "full stack"],
+    "stackForte": ["typescript", "node", "react", "postgres", "react native"],
+    "stackOk": ["python", "sql", "rust", "javascript"],
+    "eliminatorios": ["sênior", "senior", "especialista", "tech lead", ".net", "c#", "spring", "5 anos", "3 anos"],
+    "niveis": ["estagio", "junior"],
+    "modalidades": ["remoto", "hibrido"],
+    "locaisPresencialAceito": ["recife", "jaboatão", "pernambuco"]
+  },
+  "suporte": {
+    "titulosBons": ["suporte", "sustentação", "help desk", "service desk", "n1", "n2"],
+    "stackForte": ["sql", "linux", "windows", "redes"],
+    "stackOk": ["python", "api", "postgres"],
+    "eliminatorios": ["sênior", "senior", "coordenador", "5 anos"],
+    "niveis": ["estagio", "junior", "desconhecido"],
+    "modalidades": ["remoto", "hibrido"],
+    "locaisPresencialAceito": ["recife", "jaboatão", "pernambuco"]
+  }
+}
