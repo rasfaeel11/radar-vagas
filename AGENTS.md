@@ -157,12 +157,12 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 
 ### Fase 3 — Fontes (`src/fontes/`)
 
-- [ ] Interface comum do adaptador (`buscar(desde: Date): Promise<VagaBruta[]>`)
-- [ ] `github.ts` (issues + labels → nível, modalidade, contrato) com token
-- [ ] `greenhouse.ts` lendo empresas de `config/empresas.json`
-- [ ] `lever.ts` lendo empresas de `config/empresas.json`
-- [ ] Tratamento de erro por fonte (uma fonte falhando não derruba as outras)
-- [ ] Testes com fixtures (JSON real salvo, sem rede)
+- [x] Interface comum do adaptador (`buscar(desde: Date): Promise<VagaBruta[]>`)
+- [x] `github.ts` (issues + labels → nível, modalidade, contrato) com token
+- [x] `greenhouse.ts` lendo empresas de `config/empresas.json`
+- [x] `lever.ts` lendo empresas de `config/empresas.json`
+- [x] Tratamento de erro por fonte (uma fonte falhando não derruba as outras)
+- [x] Testes com fixtures (JSON real salvo, sem rede)
 
 ### Fase 4 — Persistência (`src/store/`)
 

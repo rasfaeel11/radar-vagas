@@ -1,0 +1,47 @@
+[
+  {
+    "id": "a1b2c3d4-0001",
+    "text": "Pessoa Desenvolvedora Backend Júnior",
+    "hostedUrl": "https://jobs.lever.co/neon/a1b2c3d4-0001",
+    "createdAt": 1795003200000,
+    "workplaceType": "remote",
+    "country": "BR",
+    "categories": {
+      "commitment": "CLT",
+      "department": "Tecnologia",
+      "location": "Brasil - Remoto",
+      "team": "Core Banking"
+    },
+    "descriptionPlain": "Atue na evolução das APIs da Neon com TypeScript e Postgres.",
+    "lists": [
+      {
+        "text": "Requisitos",
+        "content": "<li>Node.js e TypeScript</li><li>SQL e PostgreSQL</li>"
+      }
+    ],
+    "additionalPlain": "Benefícios completos."
+  },
+  {
+    "id": "a1b2c3d4-0002",
+    "text": "Analista de Suporte N1",
+    "hostedUrl": "https://jobs.lever.co/neon/a1b2c3d4-0002",
+    "createdAt": 1795046400000,
+    "workplaceType": "unspecified",
+    "categories": {
+      "commitment": "CLT",
+      "location": "Recife - PE"
+    },
+    "descriptionPlain": "Suporte a sistemas Linux, Windows e bancos SQL."
+  },
+  {
+    "id": "old-9999",
+    "text": "Vaga Antiga",
+    "hostedUrl": "https://jobs.lever.co/neon/old-9999",
+    "createdAt": 1790000000000,
+    "workplaceType": "hybrid",
+    "categories": {
+      "location": "São Paulo"
+    },
+    "descriptionPlain": "Publicada há muito tempo."
+  }
+]

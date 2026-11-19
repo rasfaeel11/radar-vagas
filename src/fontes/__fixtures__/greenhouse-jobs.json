@@ -1,0 +1,30 @@
+{
+  "jobs": [
+    {
+      "id": 6214098,
+      "title": "Software Engineer - Backend",
+      "company_name": "Wildlife Studios",
+      "absolute_url": "https://job-boards.greenhouse.io/wildlifestudios/jobs/6214098",
+      "location": { "name": "São Paulo, Brazil" },
+      "first_published": "2026-11-18T15:30:00-03:00",
+      "updated_at": "2026-11-19T08:00:00-03:00",
+      "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Venha trabalhar com &lt;strong&gt;Node.js &amp;amp; TypeScript&lt;/strong&gt;.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;PostgreSQL&lt;/li&gt;&lt;li&gt;AWS&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
+      "metadata": [
+        { "id": 1, "name": "Work Model", "value": "Hybrid", "value_type": "single_select" }
+      ],
+      "departments": [{ "id": 10, "name": "Engineering" }]
+    },
+    {
+      "id": 5000001,
+      "title": "Old Position",
+      "company_name": "Wildlife Studios",
+      "absolute_url": "https://job-boards.greenhouse.io/wildlifestudios/jobs/5000001",
+      "location": { "name": "Remote" },
+      "first_published": "2026-10-10T10:00:00Z",
+      "updated_at": "2026-10-10T10:00:00Z",
+      "content": "&lt;p&gt;Vaga antiga.&lt;/p&gt;",
+      "metadata": [],
+      "departments": []
+    }
+  ]
+}
