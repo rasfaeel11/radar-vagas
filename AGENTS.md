@@ -139,8 +139,8 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 - [x] Vitest configurado (`npm test`)
 - [x] Scripts: `dev`, `build`, `start`, `test`, `typecheck`, `lint`
 - [x] ESLint + Prettier
-- [ ] Carregamento e validação do `.env`
-- [ ] Carregamento e validação de `config/perfis.json` e `config/empresas.json`
+- [x] Carregamento e validação do `.env`
+- [x] Carregamento e validação de `config/perfis.json` e `config/empresas.json`
 - [x] CI no GitHub Actions (typecheck + testes)
 
 ### Fase 2 — Tipos e núcleo (`src/core/`)
