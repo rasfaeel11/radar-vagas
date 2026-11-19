@@ -1,0 +1,28 @@
+# dependências
+node_modules/
+
+# build
+dist/
+*.tsbuildinfo
+
+# segredos e ambiente
+.env
+.env.*
+!.env.example
+
+# banco local
+*.db
+*.db-journal
+*.sqlite
+data/
+
+# logs e coverage
+logs/
+*.log
+coverage/
+
+# editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
