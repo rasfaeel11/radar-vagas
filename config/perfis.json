@@ -3,7 +3,17 @@
     "titulosBons": ["desenvolvedor", "developer", "dev", "backend", "fullstack", "full stack"],
     "stackForte": ["typescript", "node", "react", "postgres", "react native"],
     "stackOk": ["python", "sql", "rust", "javascript"],
-    "eliminatorios": ["sênior", "senior", "especialista", "tech lead", ".net", "c#", "spring", "5 anos", "3 anos"],
+    "eliminatorios": [
+      "sênior",
+      "senior",
+      "especialista",
+      "tech lead",
+      ".net",
+      "c#",
+      "spring",
+      "5 anos",
+      "3 anos"
+    ],
     "niveis": ["estagio", "junior"],
     "modalidades": ["remoto", "hibrido"],
     "locaisPresencialAceito": ["recife", "jaboatão", "pernambuco"]

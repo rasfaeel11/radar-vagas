@@ -4,26 +4,26 @@ Levantamento feito em **2026-11-19**. Contagem = issues abertas atualizadas nos 
 
 ## GitHub (vagas como issues)
 
-| Repo | Issues 30d | Última | Usar? |
-|---|---|---|---|
-| `backend-br/vagas` | 39 | 2026-11-18 | ✅ principal |
-| `react-brasil/vagas` | 4 | 2026-11-18 | ✅ |
-| `frontendbr/vagas` | 3 | 2026-11-18 | ✅ |
-| `phpdevbr/vagas` | 3 | 2026-11-05 | ⚪ opcional |
-| `androiddevbr/vagas` | 3 | 2026-10-30 | ⚪ opcional |
-| `qa-brasil/vagas` | 1 | 2026-11-17 | ⚪ opcional |
-| `soujava/vagas-java` | 1 | 2026-11-17 | ❌ (Java/Spring é eliminatório no perfil dev) |
-| `nodejsdevbr/vagas` | 1 | 2026-08-27 | ❌ parado |
-| `CocoaHeadsBrasil/vagas`, `vuejs-br/vagas`, `datascience-br/vagas`, `Gommunity/vagas`, `uxbrasil/vagas` | 0 | — | ❌ parados |
-| `devopsbr/vagas`, `golang-br/vagas`, `python-brasil/vagas` | — | — | ❌ não existem (404) |
+| Repo                                                                                                    | Issues 30d | Última     | Usar?                                         |
+| ------------------------------------------------------------------------------------------------------- | ---------- | ---------- | --------------------------------------------- |
+| `backend-br/vagas`                                                                                      | 39         | 2026-11-18 | ✅ principal                                  |
+| `react-brasil/vagas`                                                                                    | 4          | 2026-11-18 | ✅                                            |
+| `frontendbr/vagas`                                                                                      | 3          | 2026-11-18 | ✅                                            |
+| `phpdevbr/vagas`                                                                                        | 3          | 2026-11-05 | ⚪ opcional                                   |
+| `androiddevbr/vagas`                                                                                    | 3          | 2026-10-30 | ⚪ opcional                                   |
+| `qa-brasil/vagas`                                                                                       | 1          | 2026-11-17 | ⚪ opcional                                   |
+| `soujava/vagas-java`                                                                                    | 1          | 2026-11-17 | ❌ (Java/Spring é eliminatório no perfil dev) |
+| `nodejsdevbr/vagas`                                                                                     | 1          | 2026-08-27 | ❌ parado                                     |
+| `CocoaHeadsBrasil/vagas`, `vuejs-br/vagas`, `datascience-br/vagas`, `Gommunity/vagas`, `uxbrasil/vagas` | 0          | —          | ❌ parados                                    |
+| `devopsbr/vagas`, `golang-br/vagas`, `python-brasil/vagas`                                              | —          | —          | ❌ não existem (404)                          |
 
 ### Observações da API
 
 - `since` filtra por **`updated_at`**, não por criação. Filtrar `created_at` no adaptador.
 - O endpoint de issues também devolve **PRs**: descartar itens com `pull_request`.
 - **Não existe campo de empresa.** Ela vem no título, em formatos variados:
-  - `[Remoto] Desenvolvedor(a) Backend Pleno - White Label e Plataforma - Mimix AI` → último segmento após ` - `
-  - `[Remote] Product Engineer na JotPsych` → depois de ` na ` / ` at `
+  - `[Remoto] Desenvolvedor(a) Backend Pleno - White Label e Plataforma - Mimix AI` → último segmento após `-`
+  - `[Remote] Product Engineer na JotPsych` → depois de `na` / `at`
   - Corpo costuma ter a seção `### Sobre a empresa` / `### About the company`.
   - Fallback: `desconhecida`.
 - Título costuma começar com a modalidade entre colchetes: `[Remoto]`, `[Remote]`, `[Híbrido]`.
@@ -31,6 +31,7 @@ Levantamento feito em **2026-11-19**. Contagem = issues abertas atualizadas nos 
 ### Formato dos labels
 
 **backend-br/vagas** (labels "limpos", com acento):
+
 - Nível: `Júnior`, `Pleno`, `Sênior`, `Especialista`
 - Modalidade: `Remoto`, `Híbrido` (presencial: ausência de ambos)
 - Contrato: `CLT`, `PJ`, `Contrato`, `Freelance`
@@ -40,6 +41,7 @@ Levantamento feito em **2026-11-19**. Contagem = issues abertas atualizadas nos 
 **frontendbr/vagas**: mesmo padrão (`Sênior`, `Especialista`, `PJ`, `Remoto`).
 
 **react-brasil/vagas** (labels com emoji, **sem acento**):
+
 - Nível: `👦 Junior`, `👨 Pleno`, `👴 Senior`
 - Modalidade: `🏢 Remoto`, `🏢 Presencial`, `🏢 Flexível` (= híbrido)
 - Contrato: `⚖️ CLT`, `⚖️ PJ`, `⚖️ Outros`

@@ -1,7 +1,3 @@
 {
-  "github": [
-    "backend-br/vagas",
-    "frontendbr/vagas",
-    "react-brasil/vagas"
-  ]
+  "github": ["backend-br/vagas", "frontendbr/vagas", "react-brasil/vagas"]
 }

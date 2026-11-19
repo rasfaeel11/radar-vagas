@@ -69,11 +69,11 @@ config/
 
 ### Fontes (só abertas)
 
-| Fonte | Endpoint |
-|---|---|
-| GitHub (vagas = issues com labels de nível, modalidade, contrato) | `GET /repos/{owner}/{repo}/issues?state=open&since=<ISO>` com token pessoal |
-| Greenhouse (board público por empresa) | `GET https://boards-api.greenhouse.io/v1/boards/{empresa}/jobs?content=true` |
-| Lever (board público por empresa) | `GET https://api.lever.co/v0/postings/{empresa}?mode=json` |
+| Fonte                                                             | Endpoint                                                                     |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| GitHub (vagas = issues com labels de nível, modalidade, contrato) | `GET /repos/{owner}/{repo}/issues?state=open&since=<ISO>` com token pessoal  |
+| Greenhouse (board público por empresa)                            | `GET https://boards-api.greenhouse.io/v1/boards/{empresa}/jobs?content=true` |
+| Lever (board público por empresa)                                 | `GET https://api.lever.co/v0/postings/{empresa}?mode=json`                   |
 
 Repos do GitHub: `backend-br/vagas`, `frontendbr/vagas` e outros da mesma família que estiverem ativos.
 
@@ -83,17 +83,17 @@ Mesma **empresa** + **título normalizado** (minúsculas, sem acento, sem "vaga 
 
 ### Pontuação (sugerida, ajustar após ver vagas reais)
 
-| Critério | Pontos |
-|---|---|
-| Termo eliminatório no título | vaga descartada |
-| Título bate com `titulosBons` | +20 |
-| Cada termo de `stackForte` na descrição | +10 (máx. +40) |
-| Cada termo de `stackOk` | +5 (máx. +15) |
-| Nível dentro de `niveis` | +15 |
-| Remoto | +15 |
-| Híbrido em Recife | +10 |
-| Presencial fora de `locaisPresencialAceito` | descartada |
-| Termo eliminatório só na descrição | −25 (não elimina: "não exigimos 3 anos" é comum) |
+| Critério                                    | Pontos                                           |
+| ------------------------------------------- | ------------------------------------------------ |
+| Termo eliminatório no título                | vaga descartada                                  |
+| Título bate com `titulosBons`               | +20                                              |
+| Cada termo de `stackForte` na descrição     | +10 (máx. +40)                                   |
+| Cada termo de `stackOk`                     | +5 (máx. +15)                                    |
+| Nível dentro de `niveis`                    | +15                                              |
+| Remoto                                      | +15                                              |
+| Híbrido em Recife                           | +10                                              |
+| Presencial fora de `locaisPresencialAceito` | descartada                                       |
+| Termo eliminatório só na descrição          | −25 (não elimina: "não exigimos 3 anos" é comum) |
 
 A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja **≥ 40**. Pontuar deve devolver também os **motivos** (lista legível de por que ganhou/perdeu pontos).
 
@@ -121,6 +121,7 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 ## 7. TODO — escopo geral do MVP
 
 ### Fase 0 — Validação das fontes (antes de codar)
+
 - [ ] Confirmar que `backend-br/vagas` está ativo (issues recentes) e anotar o formato real dos labels
 - [ ] Confirmar `frontendbr/vagas` e anotar labels
 - [ ] Levantar outros repos da mesma família que estejam ativos
@@ -129,6 +130,7 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 - [ ] Registrar os achados em `docs/fontes.md`
 
 ### Fase 1 — Setup do projeto
+
 - [ ] `package.json`, TypeScript strict, `tsconfig.json`
 - [ ] Vitest configurado (`npm test`)
 - [ ] Scripts: `dev`, `build`, `start`, `test`, `typecheck`, `lint`
@@ -138,6 +140,7 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 - [ ] CI no GitHub Actions (typecheck + testes)
 
 ### Fase 2 — Tipos e núcleo (`src/core/`)
+
 - [ ] Tipos: `VagaBruta`, `Vaga`, `Perfil`, `ResultadoPontuacao` (score + motivos + descartada)
 - [ ] **[agente]** Testes de `normalizar` com casos de vaga real
 - [ ] **[autor, sem IA]** Implementar `normalizar`
@@ -149,6 +152,7 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 - [ ] `escolherPerfil` (maior score, mínimo 40) + testes
 
 ### Fase 3 — Fontes (`src/fontes/`)
+
 - [ ] Interface comum do adaptador (`buscar(desde: Date): Promise<VagaBruta[]>`)
 - [ ] `github.ts` (issues + labels → nível, modalidade, contrato) com token
 - [ ] `greenhouse.ts` lendo empresas de `config/empresas.json`
@@ -157,6 +161,7 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 - [ ] Testes com fixtures (JSON real salvo, sem rede)
 
 ### Fase 4 — Persistência (`src/store/`)
+
 - [ ] Schema SQLite: `vagas`, `envios`, `acoes (vaga_id, acao, data)`
 - [ ] Migrações simples
 - [ ] Inserir vagas novas e consultar as das últimas 24h não enviadas
@@ -164,6 +169,7 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 - [ ] Consulta agregada para `/semana` (por fonte)
 
 ### Fase 5 — Telegram (`src/notificar/`)
+
 - [ ] Bot com token do `.env`
 - [ ] Filtro de segurança (só grupo e usuário do `.env`)
 - [ ] Formatação da vaga (título, empresa, modalidade, score, 2 motivos, link)
@@ -172,15 +178,18 @@ A vaga entra no resumo do perfil em que tiver o **maior score**, desde que seja 
 - [ ] Comando `/semana`
 
 ### Fase 6 — Jobs (`src/jobs/`)
+
 - [ ] Coleta agendada (node-cron): fontes → normalizar → deduplicar → pontuar → salvar
 - [ ] Resumo diário às 8h (fuso America/Recife)
 - [ ] Logs simples de cada execução
 
 ### Fase 7 — Deploy e operação
+
 - [ ] Escolher onde rodar (VPS, Raspberry, Fly.io, etc.)
 - [ ] Backup do SQLite
 - [ ] Documentar setup do bot e do grupo com Tópicos no README
 
 ### Depois do MVP (ideias, não fazer agora)
+
 - [ ] Ajustar pesos da pontuação com base em vagas reais e no histórico de `acoes`
 - [ ] Novas fontes abertas (novos adaptadores)

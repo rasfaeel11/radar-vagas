@@ -1,8 +1,4 @@
 {
-  "greenhouse": [
-    { "slug": "wildlifestudios", "nome": "Wildlife Studios" }
-  ],
-  "lever": [
-    { "slug": "neon", "nome": "Neon" }
-  ]
+  "greenhouse": [{ "slug": "wildlifestudios", "nome": "Wildlife Studios" }],
+  "lever": [{ "slug": "neon", "nome": "Neon" }]
 }
